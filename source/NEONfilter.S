@@ -112,5 +112,4 @@ NEON_IIRFilter:
 	vpop {q4, q5, q6, q7}							@ Restore q registers we used
 	pop {r4, r5, r6, r7, r8, r9, r10}				@ Restore r registers we used
 	bx lr
-
 	

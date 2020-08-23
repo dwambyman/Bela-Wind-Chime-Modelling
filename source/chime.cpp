@@ -174,11 +174,11 @@ void Chime::chimeInit(int chimeNum, int sampleRate)
 	{
 		for (int j = 0; j < NUMBER_OF_MODES; j++)
 		{
-			if (currentState_[j] == envelopeStateOff)	// Envelope is off
+			if (currentState_[j] == envelopeStateOff)	 // Envelope is off
 			{
 				currentLevel_[j] = 0;
 			}
-			else if (currentState_[j] == envelopeStateAttack)   // Envelope is in its attack state
+			else if (currentState_[j] == envelopeStateAttack)	// Envelope is in its attack state
 			{
 				currentSampleIndex_[j]++;
 				
@@ -203,7 +203,7 @@ void Chime::chimeInit(int chimeNum, int sampleRate)
 				// Set the index at which the envelope will transition from decay to off
 				nextStateSampleIndex_[j] = stateValue_[envelopeStateDecay][j] * sampleRate_;
 				
-				// The current level will decrease Logarithmically by the multiplier calculated below 
+				// The current level will decrease logarithmically by the multiplier calculated below 
 				float multiplier_ = 1.0 + (log(minimumLevel_) - log(currentLevel_[j])) / (nextStateSampleIndex_[j]);
 				currentLevel_[j] *= multiplier_;
 				

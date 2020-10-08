@@ -2,6 +2,6 @@
 
 Wind chime and wind modelling program written for use on the Bela Board
 
-## Accompanying video
+## Accompanying video
 
 https://youtu.be/uabg2uG9_rE
